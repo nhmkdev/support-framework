@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Support Framework Demo Game</title>
+
+    <!-- XDK ENABLED -->
+    <!--
+    <script src='intelxdk.js'></script>
+    <script src="http://debug-software.intel.com/target/target-script-min.js#0lkB88J4wOD4GOPJ9gXNpsfmWSXFNEzUgDqqFyOw_RY"></script>
+    <script type="text/javascript">
+        /* This code prevents users from dragging the page */
+        var preventDefaultScroll = function(event) {
+            event.preventDefault();
+            window.scroll(0,0);
+            return false;
+        };
+        window.document.addEventListener('touchmove', preventDefaultScroll, false);
+
+        /* This code is used to run as soon as appMobi activates */
+        var onDeviceReady=function()
+        {
+            intel.xdk.device.hideSplashScreen();
+            intel.xdk.display.useViewport(320,480);
+
+            document.getElementsByTagName('body')[0].style.visibility="visible";
+
+            // uncomment line below to lock game in landscape. Uncomment and change to "portrait" to lock in portrait
+            intel.xdk.device.setRotateOrientation("landscape");
+
+            intel.xdk.device.managePower(true,false);
+
+            // This line lets DC know it's being used.
+            intel.xdk.canvas.load("index.js");
+
+            intel.xdk.device.setAutoRotate(false);
+
+            //turn on multiTouch for Android
+            try{
+                if(intel.xdk.multitouch) {
+                    intel.xdk.multitouch.enable();
+                }
+            }
+            catch(e){}
+
+        }
+        document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
+
+        function handleInputDown(action)
+        {
+            console.log('D ' + action);
+            intel.xdk.canvas.execute('ig.input.actions[\'' + action + '\']=true;ig.input.presses[\'' + action + '\']=true;');
+        }
+
+        function handleInputUp(action)
+        {
+            console.log('U ' + action);
+            intel.xdk.canvas.execute('ig.input.delayedKeyup[\'' + action + '\']=true;');
+        }
+
+        var keyboardMapping =
+        {
+            17:'primary',
+            18:'secondary',
+            37:'left',
+            38:'up',
+            39:'right',
+            40:'down'
+        }
+
+        // http://unixpapa.com/js/key.html -- keyboard mappings
+        // REMOVE for release (only intended to speed up local dev)
+        document.onkeydown = function(e)
+        {
+            e = e || window.event;
+            var code = e.which || e.keyCode;
+            if(keyboardMapping.hasOwnProperty(code))
+            {
+                handleInputDown(keyboardMapping[code]);
+                e.preventDefault();
+            }
+        };
+
+        document.onkeyup = function(e)
+        {
+            e = e || window.event;
+            var code = e.which || e.keyCode;
+            if(keyboardMapping.hasOwnProperty(code))
+            {
+                handleInputUp(keyboardMapping[code]);
+                e.preventDefault();
+            }
+        };
+
+    </script>-->
+
+    <!-- XDK DISABLED (standard ImpactJS) -->
+    <script type="text/javascript" src="lib/impact/impact.js"></script>
+    <script type="text/javascript" src="lib/game/main.js"></script>
+    <!-- XDK DISABLED (minified ImpactJS) -->
+    <!--<script type="text/javascript" src="game.min.js"></script> -->
+</head>
+<body>
+
+    <!-- XDK ENABLED -->
+    <!-- TODO: check if these divs can be created from within the javascript-->
+    <!-- TODO: there is a margin coming from somewhere... -->
+<!--
+    <div style="position:absolute;top:0px;bottom:0px;left:0px;right:0px;">
+        <div style="position:absolute;bottom:0px;left:0px;" id="ButtonLeft" ontouchstart="handleInputDown('left');" ontouchend="handleInputUp('left');" ><img src="media/red64.png"></div>
+        <div style="position:absolute;bottom:0px;left:64px;" id="ButtonRight" ontouchstart="handleInputDown('right');" ontouchend="handleInputUp('right');" ><img src="media/red64.png"></div>
+        <div style="position:absolute;bottom:64px;left:32px;" id="ButtonUp" ontouchstart="handleInputDown('up');" ontouchend="handleInputUp('up');" ><img src="media/red64.png"></div>
+        <div style="position:absolute;bottom:0px;right:64px" id="ButtonPrimary" ontouchstart="handleInputDown('primary');" ontouchend="handleInputUp('primary');" ><img src="media/red64.png"></div>
+        <div style="position:absolute;bottom:0px;right:0px"  id="ButtonSecondary" ontouchstart="handleInputDown('secondary');" ontouchend="handleInputUp('secondary');" ><img src="media/red64.png"></div>
+    </div>
+-->
+
+    <!-- XDK DISABLED (standard ImpactJS) -->
+	<canvas id="canvas"></canvas>
+</body>
+</html>

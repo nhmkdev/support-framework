@@ -1,0 +1,15 @@
+__other/
+lib/impact
+lib/weltmeister
+tools/bake.php
+tools/bake.bat
+tools/bake.sh
+tools/jsmin.php
+.idea/
+/favicon.ico
+/ImpactTest.xdk
+/weltmeister.html
+/.htaccess
+/game.min.js
+support-framework-demo.xdk
+support-framework-demo.xdke
