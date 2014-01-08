@@ -2,7 +2,6 @@ support-framework
 =================
 
 An open source ImpactJS / Intel XDK based framework/toolset.
-<<<<<<< HEAD
 
 This is a hobby project to learn more about JavaScript, ImpactJS, and the Intel XDK. ImpactJS is a great way to learn about JavaScript and the basics of game development.
 
@@ -23,5 +22,3 @@ Per Platform Functionality
 Wiki: https://github.com/nhmkdev/support-framework/wiki
 
 Super limited demonstration: http://www.nhmk.com/games/supportdemo/
-=======
->>>>>>> fb4ac67... Initial commit
