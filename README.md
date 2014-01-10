@@ -12,10 +12,13 @@ Current Status: Warzone! (very messy)
 Current Focus: More/Better Documentation (coming soon!)
 
 Per Platform Functionality
-* Browser: YES
-* Intel XDK (emulator): YES
-* iOS: Broken :(
-* Android: Broken :(
+
+| Platform | Status |
+| -------- | ------ |
+| Browser | YES |
+| Intel XDK (emulator) | YES |
+| iOS | Broken |
+| Android | Broken |
 
 (At this time the Intel XDK + ImpactJS do not appear to function correctly on iOS OR Android.)
 
