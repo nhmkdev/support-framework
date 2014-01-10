@@ -15,8 +15,8 @@ Per Platform Functionality
 
 | Platform | Status |
 | -------- | ------ |
-| Browser | YES |
-| Intel XDK (emulator) | YES |
+| Browser | Working |
+| Intel XDK (emulator) | Working |
 | iOS | Broken |
 | Android | Broken |
 
