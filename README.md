@@ -11,7 +11,7 @@ Current Status: Warzone! (very messy)
 
 Current Focus: More/Better Documentation (coming soon!)
 
-Per Platform Functionality
+Per Platform Functionality (Intel XDK v240)
 
 | Platform | Status |
 | -------- | ------ |
